@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+	<meta http-equiv="content-type" content="text/html, charset=utf-8" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="viewport" content="width=720, height=device-height, user-scalable=yes" />
+	<title>Character Builder</title>
+	<script src="javascript.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script>window.onload = function () { randomizecharacter() }</script>
+</head>
+
+<body>
+	<br>
+	<h1>Character Builder</h1>
+	<br>
+	<div id=root>
+		<canvas id="canvas"></canvas>
+		<br><br>
+		<button onClick="randomizecharacter();">Randomize!</button>
+		<br><br>
+		<div id=inputs>
+			<label>
+				<span class="a">Body</span>
+				<input type="range" min="1" max="8" value="1" class="slider" id="bodySlider"
+					oninput="setupcharacter();document.getElementById('bodySliderNumberText').innerHTML=value+'/8';">
+				<span class="b" id='bodySliderNumberText'></span>
+				<input type="checkbox" id="randomizebody" name="randomizebody">Lock</label>
+
+			<label>
+				<span class="a">Pants</span>
+				<input type="range" min="1" max="8" value="1" class="slider" id="pantsSlider"
+					oninput="setupcharacter();document.getElementById('pantsSliderNumberText').innerHTML=value+'/8';">
+				<span class="b" id='pantsSliderNumberText'></span>
+				<input type="checkbox" id="randomizepants" name="randomizepants">Lock</label>
+
+			<label>
+				<span class="a">Shirt</span>
+				<input type="range" min="1" max="110" value="1" class="slider" id="shirtSlider"
+					oninput="setupcharacter();document.getElementById('shirtSliderNumberText').innerHTML=value+'/110';">
+				<span class="b" id='shirtSliderNumberText'></span>
+				<input type="checkbox" id="randomizeshirt" name="randomizeshirt">Lock</label>
+
+			<label>
+				<span class="a">Shoes</span>
+				<input type="range" min="1" max="12" value="1" class="slider" id="shoesSlider"
+					oninput="setupcharacter();document.getElementById('shoesSliderNumberText').innerHTML=value+'/12';">
+				<span class="b" id='shoesSliderNumberText'></span>
+				<input type="checkbox" id="randomizeshoes" name="randomizeshoes">Lock</label>
+
+			<label>
+				<span class="a">Hat</span>
+				<input type="range" min="0" max="36" value="1" class="slider" id="hatSlider"
+					oninput="setupcharacter();document.getElementById('hatSliderNumberText').innerHTML=value+'/36';">
+				<span class="b" id='hatSliderNumberText'></span>
+				<input type="checkbox" id="randomizehat" name="randomizehat">Lock</label>
+
+			<label>
+				<span class="a">Hair</span>
+				<input type="range" min="0" max="80" value="1" class="slider" id="hairSlider"
+					oninput="setupcharacter();document.getElementById('hairSliderNumberText').innerHTML=value+'/80';">
+				<span class="b" id='hairSliderNumberText'></span>
+				<input type="checkbox" id="randomizehair" name="randomizehair">Lock</label>
+
+			<label>
+				<span class="a">Weapon</span>
+				<input type="range" min="0" max="110" value="1" class="slider" id="weaponSlider"
+					oninput="setupcharacter();document.getElementById('weaponSliderNumberText').innerHTML=value+'/110';">
+				<span class="b" id='weaponSliderNumberText'></span>
+				<input type="checkbox" id="randomizeweapon" name="randomizeweapon">Lock</label>
+
+			<label>
+				<span class="a">Shield</span>
+				<input type="range" min="0" max="60" value="1" class="slider" id="shieldSlider"
+					oninput="setupcharacter();document.getElementById('shieldSliderNumberText').innerHTML=value+'/60';">
+				<span class="b" id='shieldSliderNumberText'></span>
+				<input type="checkbox" id="randomizeshield" name="randomizeshield">Lock</label>
+
+		</div>
+	</div>
+	<br>
+	<a target="_blank" id="download" download="Weapon_Builder.png"><button onClick="saveImage();"
+			class="button button2">Save</button></a>
+	<br><br>
+	<h4>Made by Entropy, Art by Kenney.nl (<a href="https://www.kenney.nl/assets/roguelike-characters"
+			target="_blank">Roguelike Characters</a>) CC0 1.0</h4>
+	<h4>Not For NFT Use!</h4>
+</body>
+
+</html>
